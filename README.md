@@ -9,7 +9,11 @@ ng version: 6.1.5
 npm install -g npm@latest
 npm install -g @angular/cli
 
-Herramienta
+Herramientas:
 https://github.com/angular/angular-cli/wiki
 
 ng serve --open
+
+Host:
+https://cpanel.hostinger.com.ar
+Filezilla
