@@ -17,3 +17,6 @@ ng serve --open
 Host:
 https://cpanel.hostinger.com.ar
 Filezilla
+
+Implementación:
+ng build
