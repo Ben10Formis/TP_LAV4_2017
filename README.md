@@ -20,3 +20,6 @@ Filezilla
 
 Implementación:
 ng build
+
+El contenido de la carpeta dist copiar en el ftp (filezilla) directamente en public_html y funca:
+http://pizzatppizza.esy.es/
