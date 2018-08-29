@@ -23,3 +23,6 @@ ng build
 
 El contenido de la carpeta dist copiar en el ftp (filezilla) directamente en public_html y funca:
 http://pizzatppizza.esy.es/
+
+Cambio el favi.ico:
+https://www.favicon-generator.org
