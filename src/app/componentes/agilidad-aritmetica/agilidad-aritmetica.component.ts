@@ -17,6 +17,8 @@ export class AgilidadAritmeticaComponent implements OnInit {
   repetidor:any;
   private subscription: Subscription;
   Mensajes:string;
+  jugador = JSON.parse(localStorage.getItem("usuarioEnLinea"));
+  arrayResultados : Array<any> = new Array<any>();
 
   ngOnInit() { }
 
@@ -24,6 +26,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
     this.ocultarVerificar=true;
     this.Tiempo=10; 
     this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false);
+    this.arrayResultados = JSON.parse(localStorage.getItem("Resultados"));
     console.info("Inicio agilidad: estoy en el constructor"); 
   }
 
@@ -41,41 +44,38 @@ export class AgilidadAritmeticaComponent implements OnInit {
       }
     }, 900);
   }
-  verificar()  {
-    if(this.nuevoJuego.verificar()){
-      this.MostarMensaje("Ganaste!!!",true);
-    }
-    else{
-      this.MostarMensaje("Casi pero nop. Perdiste!",false); 
-    }
-  this.ocultarVerificar = true;
-  this.Tiempo = 5;
-  this.enviarJuego.emit(this.nuevoJuego);
-  //this.limpiarIntervalo();
-  this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false);//para borrar el anterior
-  } 
-  limpiarIntervalo() {
-    clearInterval(this.repetidor);
-    this.ocultarVerificar=true;
-    this.Tiempo=10;
-    console.info("new JuegoAgilidad(Agilidad Aritmetica");
-    this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false);//para borrar el anterior
+  verificar(){
+  this.ocultarVerificar=false;
+  clearInterval(this.repetidor);
+  if(this.nuevoJuego.verificar()) {
+    this.MostarMensaje("Ganaste!",true);
   }
-  MostarMensaje(mensaje:string="fc MostrarMensaje()",gano:boolean=false) {
-    this.Mensajes = mensaje;    
-    var x = document.getElementById("snackbar");
-    if(gano)
-    {
-      x.className = "show Ganador";
-    }else{
-      x.className = "show Perdedor";
-    }
+  else {
+      this.MostarMensaje("Casi pero nop! Perdiste!",false);
+      
+  }
+  this.ocultarVerificar = true;
+  this.Tiempo = 10;
+  this.arrayResultados.push(this.nuevoJuego);
+  localStorage.setItem("Resultados",JSON.stringify(this.arrayResultados));
+  this.enviarJuego.emit(this.nuevoJuego);
+  //Inicio un nuevo juego sin perder la partida
+  this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false,this.jugador["mail"]);
+  }  
 
-    var modelo = this;
-    setTimeout(function(){ 
-      x.className = x.className.replace("show", "");
-      modelo.ocultarVerificar=true;
+  MostarMensaje(mensaje:string="fc MostrarMensaje()",gano:boolean=false) {
+  this.Mensajes=mensaje;    
+  var x = document.getElementById("snackbar");
+  if(gano)  {
+    x.className = "show Ganador";
+  }else{
+    x.className = "show Perdedor";
+  }
+  var modelo=this;
+  setTimeout(function(){ 
+    x.className = x.className.replace("show", "");
+    modelo.ocultarVerificar= true;
     }, 3000);
-    console.info("objeto",x);  
-   }
+  console.info("objeto",x); 
+  }
 }
