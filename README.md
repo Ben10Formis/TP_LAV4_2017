@@ -7,6 +7,7 @@ npm -v: 6.4.0
 ng version: 6.1.5
 
 npm install -g npm@latest
+
 npm install -g @angular/cli
 
 Herramientas:
