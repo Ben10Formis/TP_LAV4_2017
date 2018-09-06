@@ -31,3 +31,8 @@ https://www.favicon-generator.org
 Para generar un componente:
 
 ng g component componentes/piedra-papel-tijera
+
+Desarrollo del nuevo juego: 
+componente fanticos
+menu-card
+clases: juego-fanaticos.ts 
