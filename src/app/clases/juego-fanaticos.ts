@@ -18,11 +18,11 @@ export class Fanaticos extends Juego {
         switch(this.numImagen){
             case 1 :
             this.nombreImagen = '1';
-            this.respCorrecta = "la casa de papel";
+            this.respCorrecta = "merli";
             break;
             case 2 :
             this.nombreImagen = '2';
-            this.respCorrecta = "merli";
+            this.respCorrecta = "la casa de papel";
             break;
             case 3 :
             this.nombreImagen = '3';
