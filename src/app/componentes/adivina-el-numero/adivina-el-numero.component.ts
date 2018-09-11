@@ -40,13 +40,13 @@ export class AdivinaElNumeroComponent implements OnInit {
       let mensaje:string;
       switch (this.contador) {
         case 1:
-          mensaje="No, intento fallido, animo";
+          mensaje="No, intento fallido";
           break;
           case 2:
-          mensaje="No,Te estaras Acercando???";
+          mensaje="Nop";
           break;
           case 3:
-          mensaje="No es, Yo crei que la tercera era la vencida.";
+          mensaje="No es, será la cuarta???";
           break;
           case 4:
           mensaje="No era el  "+this.nuevoJuego.numeroIngresado;
@@ -55,7 +55,7 @@ export class AdivinaElNumeroComponent implements OnInit {
           mensaje=" intentos y nada.";
           break;
           case 6:
-          mensaje="Afortunado en el amor";
+          mensaje="El que menos intenta menos lo logra!!!";
           break;
       
         default:
