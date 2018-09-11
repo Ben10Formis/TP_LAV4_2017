@@ -9,7 +9,7 @@ export class Fanaticos extends Juego {
     respuesta : string;
     
     constructor(nombre?: string, gano?: boolean,jugador?:string){
-        super(" ¿Nexflix ó Youtuber: Qué ves? ",gano,jugador);
+        super("¿Nexflix ó Youtuber?",gano,jugador);
     }
 
     public comenzar(){
