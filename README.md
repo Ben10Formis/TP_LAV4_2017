@@ -36,3 +36,12 @@ Desarrollo del nuevo juego:
 componente fanticos
 menu-card
 clases: juego-fanaticos.ts 
+
+
+Creación de tabla inteligente
+
+https://www.npmjs.com/package/ng2-smart-table
+
+npm install --save ng2-smart-table
+
+(Se crea en el package.json:  "ng2-smart-table": "^1.3.5")
