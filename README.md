@@ -45,3 +45,6 @@ https://www.npmjs.com/package/ng2-smart-table
 npm install --save ng2-smart-table
 
 (Se crea en el package.json:  "ng2-smart-table": "^1.3.5")
+
+Si tira error al ng2 smart al compiltar la siguiente linea :
+npm install ng2-completer --save-dev
