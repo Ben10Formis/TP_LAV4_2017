@@ -48,3 +48,14 @@ npm install --save ng2-smart-table
 
 Si tira error al ng2 smart al compiltar la siguiente linea :
 npm install ng2-completer --save-dev
+
+
+Cuando tira error de versiones:
+
+npm uninstall ng2-smart-table
+
+luego agrega la versión específica
+
+npm install ng2-smart-table@1.2.0
+
+npm install
