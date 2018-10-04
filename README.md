@@ -59,3 +59,30 @@ luego agrega la versión específica
 npm install ng2-smart-table@1.2.0
 
 npm install
+
+
+Para agregar material:
+
+npm install --save @angular/material @angular/animations @angular/cdk
+
+npm install
+
+en app.module.ts agregar:
+
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+import {MatProgressSpinnerModule, MatToolbarModule} from '@angular/material';
+
+  imports: [
+    ..,
+    MatButtonModule,//Material
+    MatCheckboxModule,//Material
+    MatProgressSpinnerModule, //spinner Material
+    MatToolbarModule //toolbar Material
+  ],
+  
+  Luego en app.component.css:
+  
+  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+  
+<button mat-button color="primary">Cargar helado</button>
