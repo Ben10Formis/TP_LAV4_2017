@@ -1,6 +1,7 @@
 <!--app-menu></app-menu-->
 <!-- index.html -->
 <div class="container estilosContainer">
+  
 <h1>{{nuevoJuego.nombre}}</h1>
 <form name="juego">
 <ul>
@@ -29,7 +30,7 @@
   <li *ngIf="nuevoJuego.primer != null">
        
     <h2 [hidden]="ocultarVerificar"><p> <i class="fa fa-spinner fa-spin"></i> Esperando numero...</p></h2>
-    <!--<h2 [hidden]="ocultarVerificar"><p> <mat-spinner>.</mat-spinner><br />    Esperando número...</p></h2>-->
+   <!-- <h2 [hidden]="ocultarVerificar"><p> <mat-spinner>.</mat-spinner><br />    Esperando número...</p></h2>-->
 
     <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
     <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>

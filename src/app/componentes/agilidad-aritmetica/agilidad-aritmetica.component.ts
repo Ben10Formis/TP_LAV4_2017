@@ -25,7 +25,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
   constructor() {
     this.ocultarVerificar=true;
     this.Tiempo=10; 
-    this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false);
+    this.nuevoJuego = new JuegoAgilidad("Agilidad Aritmetica",false,this.jugador["mail"]);
     this.arrayResultados = JSON.parse(localStorage.getItem("Resultados"));
     console.info("Inicio agilidad: estoy en el constructor"); 
   }

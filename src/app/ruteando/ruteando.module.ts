@@ -28,8 +28,9 @@ import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
+//{path: '' , component: PrincipalComponent},
+{path: '' , component: LoginComponent},
 {path: 'Jugadores' , component: JugadoresListadoComponent},
-{path: '' , component: PrincipalComponent},
 {path: 'Login' , component: LoginComponent},
 {path: 'Mapa' , component: MapaDeGoogleComponent},
 {path: 'QuienSoy' , component: QuienSoyComponent},
@@ -37,28 +38,23 @@ const MiRuteo = [
 {path: 'Principal' , component: PrincipalComponent},
 {path: 'Listado' , component: ListadoComponent},
 {path: 'Paises' , component: ListadoDePaisesComponent},
-
-{ path: 'Juegos' ,
-component: JuegosComponent ,
-children:
-     [{path: '' , component: MenuCardComponent},
-     {path: 'Adivina' , component: AdivinaElNumeroComponent},
-      {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-      {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-      {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-      {path: 'PiedraPapelTijera' , component: PiedraPapelTijeraComponent},
-      {path: 'Fanaticos' , component: FanaticosComponent},
-      {path: 'Anagrama' , component: AnagramaComponent}]
+{ path: 'Juegos' ,component: JuegosComponent ,
+                      children:
+                          [{path: '' , component: MenuCardComponent},
+                          {path: 'Adivina' , component: AdivinaElNumeroComponent},
+                          {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
+                          {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
+                          {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
+                          {path: 'PiedraPapelTijera' , component: PiedraPapelTijeraComponent},
+                          {path: 'Fanaticos' , component: FanaticosComponent},
+                          {path: 'Anagrama' , component: AnagramaComponent}]
 },
 {path: '**' , component: ErrorComponent},
 {path: 'error' , component: ErrorComponent}];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(MiRuteo)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(MiRuteo)],
+  exports: [RouterModule]
 })
+
 export class RuteandoModule { }
